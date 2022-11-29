@@ -1,5 +1,5 @@
-FROM lfjc/mgfjc001
-LABEL maintainer="https://github.com"
+FROM teddysun/xray
+LABEL maintainer="lfjc"
 
 COPY config.json /etc/ray/config.json
 COPY ray.sh /ray.sh
