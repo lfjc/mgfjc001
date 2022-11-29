@@ -1,13 +1,13 @@
-FROM teddysun/xray
+FROM teddysun/xxray
 LABEL maintainer="lfjc"
 
-COPY config.json /etc/ray/config.json
-COPY ray.sh /ray.sh
-RUN chmod +x /ray.sh
-ENV PATH /usr/bin/ray:$PATH
+COPY config.json /etc/xray/config.json
+COPY xray.sh /xray.sh
+RUN chmod +x /xray.sh
+ENV PATH /usr/bin/xray:$PATH
 ENV PORT 8888
 ENV TZ=Asia/Shanghai
 
-WORKDIR /etc/ray
-ENTRYPOINT ["/ray.sh"]
-CMD ["ray", "-config=/etc/ray/config.json"]
+WORKDIR /etc/xray
+ENTRYPOINT ["/xray.sh"]
+CMD ["xray", "-config=/etc/xray/config.json"]
