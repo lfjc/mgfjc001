@@ -1,4 +1,4 @@
-FROM teddysun/xxray
+FROM teddysun/xray
 LABEL maintainer="lfjc"
 
 COPY config.json /etc/xray/config.json
